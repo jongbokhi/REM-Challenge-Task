@@ -1,0 +1,39 @@
+_type: "prompt"
+template: |
+
+  "Use the given context to answer the question."
+  "If you don't know the answer, say you don't know."
+  "Use three sentence maximum and keep the answer concise."
+
+  -----
+
+  ### Retrieved Context
+
+  Here is the context that you can use to answer the question:
+
+  {documents}
+
+  ----
+
+  ### Question
+
+  Here is user's question:
+
+  {question}
+
+  ----
+  ### Answer Format
+  You should answer with:
+  -Classification of the accent: {accent_type}
+  -English accent confidence level: {accent_grade}
+  -Summary: (short summary + judgment on whether the speaker's English is sufficient for professional work) 
+
+
+  Final review:
+  - Ensure the report follows the required structure
+  - Check that all guidelines have been followed
+  - Only respond in the format above. Do not add any explanation.
+  - Your response should be written in English
+  - Think step by step.
+
+input_variables: ["question", "documents", "accent_type", "accent_grade"]
