@@ -19,12 +19,6 @@ REMWaste_task/
 ├── state.py
 └── vectordb.py
 ```
-
-## Workflow Diagram
-
-![output](https://github.com/user-attachments/assets/2cbcd952-0ed7-4ff2-8c02-f8df0c68c217)
-
-
 ## Key Components
 
 -   `audio_to_text.py`: Contains the function to extract audio from a given YouTube URL and convert it into text using OpenAI Whisper.
@@ -36,6 +30,27 @@ REMWaste_task/
 -   `modules.ipynb`: A Jupyter notebook demonstrating the end-to-end workflow, including audio processing, vector database setup, LangGraph construction, and execution.
 -   `prompt/retrieval_chain_prompt.yaml`: Directory containing prompt templates (e.g., in YAML format) used by the chains.
 -   `requirements.txt`: Lists the Python dependencies required to run the project.
+
+## Workflow Diagram
+
+![output](https://github.com/user-attachments/assets/2cbcd952-0ed7-4ff2-8c02-f8df0c68c217)
+
+## Usage
+
+Open and run the `modules.ipynb` Jupyter notebook. The notebook guides you through the steps of processing a YouTube video, building the vector database, setting up the LangGraph workflow, and running queries.
+
+## Workflow (as shown in `modules.ipynb`)
+
+1.  Extract audio from a specified YouTube URL and transcribe it to text.
+2.  Split the transcribed text into chunks and build a FAISS vector database.
+3.  Initialize the LangGraph with defined nodes:
+    -   RetrievalNode: Retrieves relevant text chunks based on the user question.
+    -   LanguageCheckerNode: Checks if the language of the retrieved documents is English.
+    -   AccentClassifierNode: Classifies the English accent type.
+    -   AccentGraderNode: Grades the confidence level of the English accent.
+    -   RetrievalAnswerNode: Generates a final answer using the retrieved documents and accent analysis results.
+4.  Define the edges and conditional logic between the nodes.
+5.  Compile and execute the LangGraph with a user question. 
 
 ## Setup and Installation
 
@@ -79,20 +94,3 @@ REMWaste_task/
     ```dotenv
     OPENAI_API_KEY='your-openai-api-key'
     ```
-
-## Usage
-
-Open and run the `modules.ipynb` Jupyter notebook. The notebook guides you through the steps of processing a YouTube video, building the vector database, setting up the LangGraph workflow, and running queries.
-
-## Workflow (as shown in `modules.ipynb`)
-
-1.  Extract audio from a specified YouTube URL and transcribe it to text.
-2.  Split the transcribed text into chunks and build a FAISS vector database.
-3.  Initialize the LangGraph with defined nodes:
-    -   RetrievalNode: Retrieves relevant text chunks based on the user question.
-    -   LanguageCheckerNode: Checks if the language of the retrieved documents is English.
-    -   AccentClassifierNode: Classifies the English accent type.
-    -   AccentGraderNode: Grades the confidence level of the English accent.
-    -   RetrievalAnswerNode: Generates a final answer using the retrieved documents and accent analysis results.
-4.  Define the edges and conditional logic between the nodes.
-5.  Compile and execute the LangGraph with a user question. 
