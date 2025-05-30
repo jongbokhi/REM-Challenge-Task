@@ -20,6 +20,11 @@ REMWaste_task/
 └── vectordb.py
 ```
 
+## Workflow Diagram
+```
+![Workflow Diagram](https://github.com/user-attachments/assets/b24d030c-512a-4f36-83e1-f1320d395ac8)
+```
+
 ## Key Components
 
 -   `audio_to_text.py`: Contains the function to extract audio from a given YouTube URL and convert it into text using OpenAI Whisper.
