@@ -21,9 +21,9 @@ REMWaste_task/
 ```
 
 ## Workflow Diagram
-```
-![Workflow Diagram](https://github.com/user-attachments/assets/b24d030c-512a-4f36-83e1-f1320d395ac8)
-```
+
+![output](https://github.com/user-attachments/assets/2cbcd952-0ed7-4ff2-8c02-f8df0c68c217)
+
 
 ## Key Components
 
