@@ -4,7 +4,7 @@
 
 This task demonstrates a workflow for processing audio from YouTube videos, converting the audio to text, building a vector database from the transcriptions, and utilizing a LangGraph-based Vector DB to analyze the speaker's accent based on the transcribed content.
 
-## Project Structure
+## Directory Structure
 
 ```
 REMWaste_task/
