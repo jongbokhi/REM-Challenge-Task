@@ -5,7 +5,7 @@ from langchain_community.document_loaders.generic import GenericLoader
 from langchain_community.document_loaders.parsers import OpenAIWhisperParser
 
 
-def extract_audio_and_covert_to_text(url: str, audio_save_path="./youtube_audios/"):
+def extract_audio_and_convert_to_text(url: str, audio_save_path="./youtube_audios/"):
 
     # YouTube URL
     urls = [url]
