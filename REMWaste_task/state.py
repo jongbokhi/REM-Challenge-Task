@@ -11,7 +11,7 @@ class GraphState(TypedDict):
         question: user input
         documents: List of document
         accent_type: Classification of the accent
-        accent_grade: List of Englis Accent grade
+        accent_grade: Numeric confidence score representing the strength of the English accent
         generation: LLM generated answer
     """
 
@@ -20,5 +20,5 @@ class GraphState(TypedDict):
     accent_type: Annotated[
         str, "Classification of the accent (e.g., British, American, Australian, etc.)"
     ]
-    accent_grade: Annotated[List[str], "List of Englis Accent grade"]
+    accent_grade: Annotated[float, "English accent confidence score"]
     generation: Annotated[str, "LLM generated answer"]
