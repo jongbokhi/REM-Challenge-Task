@@ -3,8 +3,10 @@ from langchain_openai import ChatOpenAI
 from operator import itemgetter
 from langchain_core.prompts import load_prompt
 
+MODEL_NAME = "gpt-4o-mini"
 
-def create_retrieval_chain(prompt_name="retrieval_chain_prompt", model="gpt-4o-mini"):
+
+def create_retrieval_chain(prompt_name="retrieval_chain_prompt", model=MODEL_NAME):
     # Set prompt
     retrieval_prompt = load_prompt(f"prompt/{prompt_name}.yaml")
 

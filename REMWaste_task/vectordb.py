@@ -1,6 +1,7 @@
 import os
 from langchain.storage import LocalFileStore
 from langchain_openai import OpenAIEmbeddings
+
 from langchain.embeddings import CacheBackedEmbeddings
 from langchain_community.vectorstores.faiss import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
